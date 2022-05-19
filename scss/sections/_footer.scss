@@ -1,0 +1,118 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+footer {
+    padding-top: 1rem;
+    background: $footer;
+    .contact-box {
+        position: relative;
+     
+        &__icon {
+            width: 2rem;
+            stroke: $primary; 
+            padding: 0.2rem 0.2rem;
+            @include media-breakpoint-up(sm) {
+             width: 4rem;
+             margin-top: -0.5rem;   
+             
+            }
+         }
+         
+        &__info {
+          
+
+            &--title {
+                color: $white;
+                text-decoration: none;
+                font-size: 1rem;
+                @include media-breakpoint-up(sm) {
+                    font-size: 1rem;
+
+                }
+                &:hover {
+                    cursor: pointer;
+                    color: $primary;
+                }
+
+            }
+            &--sub {
+                color: $gray-600;
+                font-size: 0.7rem;
+                @include media-breakpoint-up(sm) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+// SOCIAL CONTENT
+.footer-sm {
+
+    a {
+        color: white;
+        i {
+            padding-left: 1rem;
+            font-size: 1rem;
+            @include media-breakpoint-up(sm) {
+                font-size: 1.7rem;
+            }
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+// Company INFO
+.company-info {
+    position: relative;
+    display: block;
+    .inSmall {
+        @include media-breakpoint-down(sm) {
+            margin-top: 1rem;
+        }
+    } 
+    .list {
+        li {
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+            list-style-type: none;
+            a{
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+// COPYRIGHT
+.footer-bottom {
+    background: $black;
+    &__copyright {
+        color: $gray-600;
+        font-weight: 400;
+        a {
+            color: $gray-300;
+            text-decoration: none;
+            &:hover {
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
+    } 
+}
+
+// back to top 
+.back-to-top {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.867rem;
+    bottom: 1.867rem;
+    z-index: 999;
+    i {
+        font-size: 1.5rem;
+        @include absoluteCenter;
+    }
+}
